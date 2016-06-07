@@ -1,0 +1,45 @@
+[product]
+application.directory = APP_PATH "/application"
+application.dispatcher.catchException =true
+application.dispatcher.throwException=true
+application.modules = index
+application.view.ext = html
+
+database.master.type="mysql"
+database.master.server="10.10.72.64"
+database.master.port=3306
+database.master.charset="utf8"
+database.master.user="root"
+database.master.password="tvmining@123"
+database.master.databases="message"
+
+database.master.server="127.0.0.1"
+database.master.port=3309
+database.master.password="123456"
+
+cache.redis.host="127.0.0.1"
+cache.redis.port=6379
+cache.redis.timeout=0
+cache.redis.key="MSG_REDIS"
+
+
+db.pool.host="127.0.0.1"
+db.pool.port=65001
+db.pool.worker_num=10
+db.pool.task_worker_num=20
+db.pool.daemonize=true
+db.pool.dispatch_mode=1
+db.pool.log_file='/tmp/swoole_server.log'
+db.pool.pid="/tmp/DbPool.pid"
+
+;读取过去6个月的站内信
+data.site.message.expire=6
+
+;加密私钥 公钥 文件
+openssl.private.key.file='/home/zhangjie/private_key.pem'
+openssl.public.key.file='/home/zhangjie/public_key.pem'
+
+site.queue.pid="/tmp/SiteQueue.pid"
+site.queue.worker_num=10
+
+
