@@ -5,6 +5,12 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
         Yaf_Registry::set('config', Yaf_Application::app()->getConfig() );
     }
 
+    public function _initLayout(){
+        $layout = new LayoutPlugin();
+        Yaf_Dispatcher::getInstance()->registerPlugin( $layout );
+
+    }
+
     public function _initDatabase(){
         Yaf_Registry::set( 'database', Yaf_Registry::get('config')->database->master->toArray() );
 
